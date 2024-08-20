@@ -1,0 +1,1242 @@
+@import "https://fonts.googleapis.com/css?family=asap:400,300,200,500,600,700";
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', cursive;
+}
+
+.col-lg-12  {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.col-lg-12 a:hover {
+    color: #000;
+    font-size: 20px;
+}
+
+.filter-container {
+    padding-bottom: 10vw;
+}
+
+.more-link:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.filter-btn-row {
+    text-align: center;
+    /* margin-bottom: 10vw; */
+}
+
+.filter-btn {
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.selected {
+    background: #FFF;
+    /* border: 2px solid #f0862c; */
+    color: #4e54c8;
+    box-shadow: none;
+}
+
+.card-location {
+    display: none;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 0) and (max-width: 425px) {
+    .filtered-cards {
+        padding: 0;
+    }
+    .card {
+        margin: 0px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: left;
+        box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    }
+    .filter-btn {
+        width: 100px;
+        font-size: 18px;
+        margin: 10px;
+    }
+}
+
+
+/** Remove img filter on mobile **/
+
+@media screen and (min-width: 0) and (max-width: 768px) {
+    .card-img-container {
+        filter: none;
+    }
+}
+
+.material-card {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(100% - 16px);
+    margin-bottom: 6.6em;
+}
+
+.material-card h2 {
+    position: absolute;
+    top: calc(100% - 0px);
+    left: 0;
+    width: 100%;
+    padding: 15px 16px;
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0;
+    z-index: 10;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card h2 span {
+    display: block;
+}
+
+.material-card h2 strong {
+    font-weight: 400;
+    display: block;
+    font-size: 0.8em;
+}
+
+.material-card h2:before,
+.material-card h2:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 0;
+    border: 8px solid;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card h2:after {
+    top: auto;
+    bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .material-card.mc-active {
+        padding-bottom: 0;
+        height: auto;
+    }
+}
+
+.material-card.mc-active h2 {
+    top: 0;
+    padding: 10px 16px 10px 90px;
+    font-size: inherit;
+}
+
+.material-card.mc-active h2:before {
+    top: 0;
+}
+
+.material-card.mc-active h2:after {
+    bottom: -16px;
+}
+
+.material-card .mc-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: -72.5px;
+    left: 16px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card .mc-btn-action {
+    position: absolute;
+    right: -2px;
+    /* top: 15px; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card.mc-active .mc-btn-action {
+    top: 62px;
+}
+
+.material-card .mc-description {
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 1.2s;
+    -moz-transition: all 1.2s;
+    -ms-transition: all 1.2s;
+    -o-transition: all 1.2s;
+    transition: all 1.2s;
+}
+
+.material-card .mc-footer {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card .mc-footer h4 {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-transition: all 1.4s;
+    -moz-transition: all 1.4s;
+    -ms-transition: all 1.4s;
+    -o-transition: all 1.4s;
+    transition: all 1.4s;
+}
+
+.material-card .mc-footer a {
+    display: block;
+    float: left;
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #fff;
+    line-height: 52px;
+    text-decoration: none;
+    top: 200px;
+}
+
+.card-footer a {
+    display: block;
+    float: left;
+    
+    width: 52px;
+    height: 52px;
+    /* margin-left: 5px; */
+    /* margin-bottom: 15px; */
+    font-size: 28px;
+    color: #fff;
+    line-height: 52px;
+    text-decoration: none;
+    
+}
+
+.card-footer a :hover{
+    font-size: 35px;
+}
+
+.material-card .mc-footer a:nth-child(1) {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.material-card .mc-footer a:nth-child(2) {
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.material-card .mc-footer a:nth-child(3) {
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.material-card .mc-footer a:nth-child(4) {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.material-card .mc-footer a:nth-child(5) {
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -ms-transition: all 0.9s;
+    -o-transition: all 0.9s;
+    transition: all 0.9s;
+}
+
+.material-card .img-container {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-card.mc-active .img-container {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: 0;
+    top: 3px;
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+}
+
+.material-card.mc-active .mc-content {
+    padding-top: 5.6em;
+}
+
+@media screen and (max-width: 767px) {
+    .material-card.mc-active .mc-content {
+        position: relative;
+        margin-right: 16px;
+    }
+}
+
+.material-card.mc-active .mc-description {
+    top: 50px;
+    overflow-y: hidden;
+    padding-top: 55px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.mc-description{
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 767px) {
+    .material-card.mc-active .mc-description {
+        position: relative;
+        top: auto;
+        overflow-y: hidden;
+        right: auto;
+        left: auto;
+        padding: 50px 30px 70px 30px;
+        bottom: 0;
+    }
+}
+
+.material-card.mc-active .mc-footer , .card-footer{
+    overflow: visible;
+    position: absolute;
+    margin-top: 2%;
+    /* top: calc(100% - 0px); */
+    bottom: -10px;
+    width: 90%;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+}
+
+.material-card.mc-active .mc-footer a {
+    top: 0;
+}
+
+.material-card.mc-active .mc-footer h4 {
+    top: -32px;
+}
+
+.material-card.Red h2 {
+    background-color: #FF5A91;
+}
+
+.material-card.Red h2:after {
+    border-top-color: #FF5A91;
+    border-right-color: #FF5A91;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Red h2:before {
+    border-top-color: transparent;
+    border-right-color: #a70b3f;
+    border-bottom-color: #a70b3f;
+    border-left-color: transparent;
+}
+
+.material-card.Red.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #FF5A91;
+    border-bottom-color: #FF5A91;
+    border-left-color: transparent;
+}
+
+.material-card.Red.mc-active h2:after {
+    border-top-color: #a70b3f;
+    border-right-color: #a70b3f;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Red .mc-btn-action {
+    background-color: #FF5A91
+}
+
+.material-card.Red .mc-btn-action:hover {
+    background-color: #a70b3f;
+}
+
+.material-card.Red .mc-footer h4 {
+    color:#a70b3f;
+}
+
+.material-card.Red .card-footer a {
+    color: #a70b3f;
+}
+
+.material-card.Red.mc-active .mc-content {
+    background-color: #FFEBEE;
+}
+
+.material-card.Red.mc-active .mc-footer {
+    background-color: #FFCDD2;
+}
+
+.material-card.Red.mc-active .mc-btn-action {
+    border-color: #FFEBEE;
+}
+
+.material-card.Blue-Grey h2 {
+    background-color: #607D8B;
+}
+
+.material-card.Blue-Grey h2:after {
+    border-top-color: #607D8B;
+    border-right-color: #607D8B;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey h2:before {
+    border-top-color: transparent;
+    border-right-color: #263238;
+    border-bottom-color: #263238;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #607D8B;
+    border-bottom-color: #607D8B;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey.mc-active h2:after {
+    border-top-color: #263238;
+    border-right-color: #263238;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey .mc-btn-action {
+    background-color: #607D8B;
+}
+
+.material-card.Blue-Grey .mc-btn-action:hover {
+    background-color: #263238;
+}
+
+.material-card.Blue-Grey .mc-footer h4 {
+    color: #263238;
+}
+
+.material-card.Blue-Grey .card-footer a {
+    color: #263238;
+}
+
+.material-card.Blue-Grey.mc-active .mc-content {
+    background-color: #ECEFF1;
+}
+
+.material-card.Blue-Grey.mc-active .mc-footer {
+    background-color: #CFD8DC;
+}
+
+.material-card.Blue-Grey.mc-active .mc-btn-action {
+    border-color: #ECEFF1;
+}
+
+.material-card.Pink h2 {
+    background-color: #E91E63;
+}
+
+.material-card.Pink h2:after {
+    border-top-color: #E91E63;
+    border-right-color: #E91E63;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Pink h2:before {
+    border-top-color: transparent;
+    border-right-color: #880E4F;
+    border-bottom-color: #880E4F;
+    border-left-color: transparent;
+}
+
+.material-card.Pink.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #E91E63;
+    border-bottom-color: #E91E63;
+    border-left-color: transparent;
+}
+
+.material-card.Pink.mc-active h2:after {
+    border-top-color: #880E4F;
+    border-right-color: #880E4F;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Pink .mc-btn-action {
+    background-color: #E91E63;
+}
+
+.material-card.Pink .mc-btn-action:hover {
+    background-color: #880E4F;
+}
+
+.material-card.Pink .mc-footer h4 {
+    color: #880E4F;
+}
+
+.material-card.Pink .card-footer a {
+    color: #880E4F;
+}
+
+.material-card.Pink.mc-active .mc-content {
+    background-color: #FCE4EC;
+}
+
+.material-card.Pink.mc-active .mc-footer {
+    background-color: #F8BBD0;
+}
+
+.material-card.Pink.mc-active .mc-btn-action {
+    border-color: #FCE4EC;
+}
+
+.material-card.Purple h2 {
+    background-color:#000;
+}
+
+.material-card.Purple h2:after {
+    border-top-color: #f34bdf;
+    border-right-color: #f34bdf;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Purple h2:before {
+    border-top-color: transparent;
+    border-right-color: #f34bdf;
+    border-bottom-color: #f34bdf;
+    border-left-color: transparent;
+}
+
+.material-card.Purple.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #f34bdf;
+    border-bottom-color: #f34bdf;
+    border-left-color: transparent;
+}
+
+.material-card.Purple.mc-active h2:after {
+    border-top-color: #f34bdf;
+    border-right-color: #f34bdf;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Purple .mc-btn-action {
+    background-color: #f34bdf;
+}
+
+.material-card.Purple .mc-btn-action:hover {
+    background-color: #f34bdf;
+}
+
+.material-card.Purple .mc-footer h4 {
+    color: #f34bdf;
+}
+
+.material-card.Purple .card-footer a , .card-footer a{
+    color: #f34bdf;
+}
+
+.material-card.Purple.mc-active .mc-content {
+    background-color: #F3E5F5;
+}
+
+.material-card.Purple.mc-active .mc-footer {
+    background-color: #E1BEE7;
+}
+
+.material-card.Purple.mc-active .mc-btn-action {
+    border-color: #F3E5F5;
+}
+
+.material-card.Deep-Purple h2 {
+    background-color: #673AB7;
+}
+
+.material-card.Deep-Purple h2:after {
+    border-top-color: #673AB7;
+    border-right-color: #673AB7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Purple h2:before {
+    border-top-color: transparent;
+    border-right-color: #311B92;
+    border-bottom-color: #311B92;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Purple.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #673AB7;
+    border-bottom-color: #673AB7;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Purple.mc-active h2:after {
+    border-top-color: #311B92;
+    border-right-color: #311B92;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Purple .mc-btn-action {
+    background-color: #673AB7;
+}
+
+.material-card.Deep-Purple .mc-btn-action:hover {
+    background-color: #311B92;
+}
+
+.material-card.Deep-Purple .mc-footer h4 {
+    color: #311B92;
+}
+
+.material-card.Deep-Purple .card-footer a {
+    color: #311B92;
+}
+
+.material-card.Deep-Purple.mc-active .mc-content {
+    background-color: #EDE7F6;
+}
+
+.material-card.Deep-Purple.mc-active .mc-footer {
+    background-color: #D1C4E9;
+}
+
+.material-card.Deep-Purple.mc-active .mc-btn-action {
+    border-color: #EDE7F6;
+}
+
+.material-card.Blue h2 {
+    background-color: #2196F3;
+}
+
+.material-card.Blue h2:after {
+    border-top-color: #2196F3;
+    border-right-color: #2196F3;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue h2:before {
+    border-top-color: transparent;
+    border-right-color: #0D47A1;
+    border-bottom-color: #0D47A1;
+    border-left-color: transparent;
+}
+
+.material-card.Blue.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #2196F3;
+    border-bottom-color: #2196F3;
+    border-left-color: transparent;
+}
+
+.material-card.Blue.mc-active h2:after {
+    border-top-color: #0D47A1;
+    border-right-color: #0D47A1;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue .mc-btn-action {
+    background-color: #2196F3;
+}
+
+.material-card.Blue .mc-btn-action:hover {
+    background-color: #0D47A1;
+}
+
+.material-card.Blue .mc-footer h4 {
+    color: #0D47A1;
+}
+
+.material-card.Blue .card-footer a {
+    color: #0D47A1;
+}
+
+.material-card.Blue.mc-active .mc-content {
+    background-color: #E3F2FD;
+}
+
+.material-card.Blue.mc-active .mc-footer {
+    background-color: #BBDEFB;
+}
+
+.material-card.Blue.mc-active .mc-btn-action {
+    border-color: #E3F2FD;
+}
+
+.material-card.Purple h2 {
+    background-color: #d310b9;
+}
+
+.material-card.Purple h2:after {
+    border-top-color: #d310b9;
+    border-right-color: #d310b9;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Purple h2:before {
+    border-top-color: transparent;
+    border-right-color: #960073;
+    border-bottom-color: #960073;
+    border-left-color: transparent;
+}
+
+.material-card.Purple.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #d310b9;
+    border-bottom-color: #d310b9;
+    border-left-color: transparent;
+}
+
+.material-card.Purple.mc-active h2:after {
+    border-top-color: #960073;
+    border-right-color: #960073;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Purple .mc-btn-action {
+    background-color: #d310b9;
+}
+
+.material-card.Purple .mc-btn-action:hover {
+    background-color: #960073;
+}
+
+.material-card.Purple .mc-footer h4 {
+    color: #960073;
+}
+
+.material-card.Purple .card-footer a , .card-footer a{
+    color: #960073;
+}
+
+.material-card.Purple.mc-active .mc-content {
+    background-color: #E1F5FE;
+}
+
+.material-card.Purple.mc-active .mc-footer {
+    background-color: #ffc3f1;
+}
+
+.material-card.Purple.mc-active .mc-btn-action {
+    border-color: #E1F5FE;
+}
+
+.material-card.Green h2 {
+    background-color: #4CAF50;
+}
+
+.material-card.Green h2:after {
+    border-top-color: #4CAF50;
+    border-right-color: #4CAF50;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Green h2:before {
+    border-top-color: transparent;
+    border-right-color: #1B5E20;
+    border-bottom-color: #1B5E20;
+    border-left-color: transparent;
+}
+
+.material-card.Green.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #4CAF50;
+    border-bottom-color: #4CAF50;
+    border-left-color: transparent;
+}
+
+.material-card.Green.mc-active h2:after {
+    border-top-color: #1B5E20;
+    border-right-color: #1B5E20;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Green .mc-btn-action {
+    background-color: #4CAF50;
+}
+
+.material-card.Green .mc-btn-action:hover {
+    background-color: #1B5E20;
+}
+
+.material-card.Green .mc-footer h4 {
+    color: #1B5E20;
+}
+
+.material-card.Green .card-footer a {
+    color: #1B5E20;
+}
+
+.material-card.Green.mc-active .mc-content {
+    background-color: #E8F5E9;
+}
+
+.material-card.Green.mc-active .mc-footer {
+    background-color: #C8E6C9;
+}
+
+.material-card.Green.mc-active .mc-btn-action {
+    border-color: #E8F5E9;
+}
+
+.material-card.Brown h2 {
+    background-color: #d68b0a;
+}
+
+.material-card.Brown h2:after {
+    border-top-color: #d68b0a;
+    border-right-color: #d68b0a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Brown h2:before {
+    border-top-color: transparent;
+    border-right-color: #a36a06;
+    border-bottom-color: #a36a06;
+    border-left-color: transparent;
+}
+
+.material-card.Brown.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #d68b0a;
+    border-bottom-color: #d68b0a;
+    border-left-color: transparent;
+}
+
+.material-card.Brown.mc-active h2:after {
+    border-top-color: #a36a06;
+    border-right-color: #a36a06;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Brown .mc-btn-action {
+    background-color: #d68b0a;
+}
+
+.material-card.Brown .mc-btn-action:hover {
+    background-color: #a36a06;
+}
+
+.material-card.Brown .mc-footer h4 {
+    color: #a36a06;
+}
+
+.material-card.Brown .card-footer a {
+   color: #a36a06;
+}
+
+.material-card.Brown.mc-active .mc-content {
+    background-color: #F1F8E9;
+}
+
+.material-card.Brown.mc-active .mc-footer {
+    background-color: #DCEDC8;
+}
+
+.material-card.Brown.mc-active .mc-btn-action {
+    border-color: #F1F8E9;
+}
+
+.material-card.Amber h2 {
+    background-color: #FF896C;
+}
+
+.material-card.Amber h2:after {
+    border-top-color: #FF896C;
+    border-right-color: #FF896C;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Amber h2:before {
+    border-top-color: transparent;
+    border-right-color: #ee4d25;
+    border-bottom-color: #ee4d25;
+    border-left-color: transparent;
+}
+
+.material-card.Amber.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #FF896C;
+    border-bottom-color: #FF896C;
+    border-left-color: transparent;
+}
+
+.material-card.Amber.mc-active h2:after {
+    border-top-color: #ee4d25;
+    border-right-color: #ee4d25;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Amber .mc-btn-action {
+    background-color: #FF896C;
+}
+
+.material-card.Amber .mc-btn-action:hover {
+    background-color: #ee4d25;
+}
+
+.material-card.Amber .mc-footer h4 {
+    color: #ee4d25;
+}
+
+.material-card.Amber .card-footer a {
+    color: #ee4d25;
+}
+
+.material-card.Amber.mc-active .mc-content {
+    background-color: #FFF8E1;
+}
+
+.material-card.Amber.mc-active .mc-footer {
+    background-color: #FFECB3;
+}
+
+.material-card.Amber.mc-active .mc-btn-action {
+    border-color: #FFF8E1;
+}
+
+.material-card.Orange h2 {
+    background-color: #FF896C;
+}
+
+.material-card.Orange h2:after {
+    border-top-color: #FF896C;
+    border-right-color: #FF896C;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Orange h2:before {
+    border-top-color: transparent;
+    border-right-color: #E65100;
+    border-bottom-color: #E65100;
+    border-left-color: transparent;
+}
+
+.material-card.Orange.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #FF896C;
+    border-bottom-color: #FF896C;
+    border-left-color: transparent;
+}
+
+.material-card.Orange.mc-active h2:after {
+    border-top-color: #E65100;
+    border-right-color: #5e2608;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Orange .mc-btn-action {
+    background-color: #FF896C
+}
+
+.material-card.Orange .mc-btn-action:hover {
+    background-color: #E65100;
+}
+
+.material-card.Orange .mc-footer h4 {
+    color: #E65100;
+}
+
+.material-card.Orange .card-footer a {
+    color: #E65100;
+}
+
+.material-card.Orange.mc-active .mc-content {
+    background-color: #FFF3E0;
+}
+
+.material-card.Orange.mc-active .mc-footer {
+    background-color: #FFE0B2;
+}
+
+.material-card.Orange.mc-active .mc-btn-action {
+    border-color: #FFF3E0;
+}
+
+.material-card.Deep-Orange h2 {
+    background-color: #FF5722;
+}
+
+.material-card.Deep-Orange h2:after {
+    border-top-color: #FF5722;
+    border-right-color: #FF5722;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Orange h2:before {
+    border-top-color: transparent;
+    border-right-color: #BF360C;
+    border-bottom-color: #BF360C;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Orange.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #FF5722;
+    border-bottom-color: #FF5722;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Orange.mc-active h2:after {
+    border-top-color: #BF360C;
+    border-right-color: #BF360C;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Deep-Orange .mc-btn-action {
+    background-color: #FF5722;
+}
+
+.material-card.Deep-Orange .mc-btn-action:hover {
+    background-color: #BF360C;
+}
+
+.material-card.Deep-Orange .mc-footer h4 {
+    color: #BF360C;
+}
+
+.material-card.Deep-Orange .card-footer a {
+    color: #BF360C;
+}
+
+.material-card.Deep-Orange.mc-active .mc-content {
+    background-color: #FBE9E7;
+}
+
+.material-card.Deep-Orange.mc-active .mc-footer {
+    background-color: #FFCCBC;
+}
+
+.material-card.Deep-Orange.mc-active .mc-btn-action {
+    border-color: #FBE9E7;
+}
+
+.material-card.Grey h2 {
+    background-color: #9E9E9E;
+}
+
+.material-card.Grey h2:after {
+    border-top-color: #9E9E9E;
+    border-right-color: #9E9E9E;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Grey h2:before {
+    border-top-color: transparent;
+    border-right-color: #212121;
+    border-bottom-color: #212121;
+    border-left-color: transparent;
+}
+
+.material-card.Grey.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #9E9E9E;
+    border-bottom-color: #9E9E9E;
+    border-left-color: transparent;
+}
+
+.material-card.Grey.mc-active h2:after {
+    border-top-color: #212121;
+    border-right-color: #212121;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Grey .mc-btn-action {
+    background-color: #9E9E9E;
+}
+
+.material-card.Grey .mc-btn-action:hover {
+    background-color: #212121;
+}
+
+.material-card.Grey .mc-footer h4 {
+    color: #212121;
+}
+
+.material-card.Grey .card-footer a {
+    color: #212121;
+}
+
+.material-card.Grey.mc-active .mc-content {
+    background-color: #FAFAFA;
+}
+
+.material-card.Grey.mc-active .mc-footer {
+    background-color: #F5F5F5;
+}
+
+.material-card.Grey.mc-active .mc-btn-action {
+    border-color: #FAFAFA;
+}
+
+.material-card.Blue-Grey h2 {
+    background-color: #607D8B;
+}
+
+.material-card.Blue-Grey h2:after {
+    border-top-color: #607D8B;
+    border-right-color: #607D8B;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey h2:before {
+    border-top-color: transparent;
+    border-right-color: #263238;
+    border-bottom-color: #263238;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey.mc-active h2:before {
+    border-top-color: transparent;
+    border-right-color: #607D8B;
+    border-bottom-color: #607D8B;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey.mc-active h2:after {
+    border-top-color: #263238;
+    border-right-color: #263238;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-card.Blue-Grey .mc-btn-action {
+    background-color: #607D8B;
+}
+
+.material-card.Blue-Grey .mc-btn-action:hover {
+    background-color: #263238;
+}
+
+.material-card.Blue-Grey .mc-footer h4 {
+    color: #263238;
+}
+
+.material-card.Blue-Grey .card-footer a {
+    color: #263238;
+}
+
+.material-card.Blue-Grey.mc-active .mc-content {
+    background-color: #ECEFF1;
+}
+
+.material-card.Blue-Grey.mc-active .mc-footer {
+    background-color: #CFD8DC;
+}
+
+.material-card.Blue-Grey.mc-active .mc-btn-action {
+    border-color: #ECEFF1;
+}
+
+h2,
+h3 {
+    font-weight: 200;
+}
+
+.img-responsive {
+    width: 100%;
+}

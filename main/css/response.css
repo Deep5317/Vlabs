@@ -1,0 +1,36 @@
+section{
+    background-color: #4e54c8;
+    overflow: hidden;
+}
+
+.quest{
+    font-size: 3vh;
+    margin-bottom: 2%;
+}
+
+
+.card-body{
+    width: 50%;
+}
+
+.feedback th, .feedback{
+    font-family: 'Montserrat', cursive;
+}
+
+.feedback th{
+    font-size: 4vh;
+}
+
+.response-tile{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.response-tile div{
+    margin: 2% 5% 2% 5%;
+}
+
+#piechart{
+    width: 50%;
+}

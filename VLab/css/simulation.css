@@ -1,0 +1,62 @@
+.btn-class{
+    display: flex;
+    justify-content: right;
+    margin: 1% 0% 1% 5%;
+}
+
+.btn-primary :hover{
+    background-color: aqua !important;
+}
+
+.btn-class .btn, .modal-body p{
+    color: #4e54c8;
+    background-color: #FFF;
+    font-family: 'Montserrat', cursive;
+    font-weight: 700;
+    text-align: center;
+    border: 5px solid #FFF;
+}
+
+.simulation{
+    padding: 0% 5% 2% 5%;
+    margin-left: 2%;
+}
+
+.resume-scr{
+    display: none;
+    margin-right: 5%;
+}
+
+#myModal{
+    top: 30%;
+}
+
+@keyframes glowing {
+    0% { border-top: 5px solid #ecda33;}
+    25% { border-right: 5px solid #ecda33;}
+    50% { border-bottom: 5px solid #ecda33; }
+    75% { border-left: 5px solid #ecda33;  }
+    100% { border-top: 5px solid #ecda33;  }
+    /* 100% { box-shadow: 0 0 20px #f1ef5d;} */
+}
+  
+.button-glow {
+    animation: glowing 2s infinite;
+}
+
+@media only screen and (max-width:1000px) {
+    h2, .exp-header{
+        font-size: 5vw;
+    }
+
+    .btn{
+        font-size: 2.5vw;
+        padding: 1% 1% 1% 1%;
+    }
+
+    .btn-class{
+        margin-bottom: 2%;
+    }
+
+}
+  

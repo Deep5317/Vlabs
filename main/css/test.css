@@ -1,0 +1,84 @@
+.quest-div {
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family:'Montserrat', cursive;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.quest-div-ol{
+    font-size: 1.6vw;
+}
+
+.space-box{
+    margin-top: 7.5%;
+}
+
+.opt-choice{
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.opt-choice ol{
+    list-style: none;
+    font-size: 1.4vw;
+    font-family:'Montserrat', cursive;
+}
+
+.opt-choice ol li{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* padding-top: -1% ; */
+}
+
+input[type="radio"]{
+    height: 1.2vw;
+    width: 1.2vw;
+    margin-right: 2%;
+}
+
+.submit-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.submit-div input{
+    padding: 1% 5% 1% 5%;
+    font-size: 1.5vw;
+    font-family:'Montserrat', cursive;
+    background-color: #FFF;
+    color: #4e54c8;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.submit-div .btn-primary :hover{
+    background-color: black;
+}
+
+.test-page{
+    background-color:#4e54c8;
+    color: #FFF;
+}
+
+.horizontal-band{
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-band li{
+    margin: 0% 8.5% 0% 8.5%;
+}
+
+.horizontal-band div{
+    width: 40%;
+    font-family: 'Montserrat', cursive;
+    margin-top: 2%;
+}
+
+.horizontal-band div h6{
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+

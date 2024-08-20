@@ -1,0 +1,20 @@
+.dum-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.table-responsive{
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+table, th{
+    text-align: center;
+    color: #FFF;
+}
+
+th{
+    font-family: 'Exo', sans-serif;
+    font-size: 7.5vh;
+}

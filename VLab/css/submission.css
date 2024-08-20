@@ -1,0 +1,89 @@
+section{
+    width: 100%;
+}
+
+#writeup_status{
+    width: 100%;
+    font-size: 1vw;
+    font-family: 'Montserrat', cursive;
+}
+
+.link-sub a{
+    font-size: 0.5vw;
+    cursor: pointer;
+}
+
+
+#writeup_status th{
+    font-size: 1vw;
+    font-family: 'Montserrat', cursive;
+}
+
+#writeup_status>tbody>tr>td, 
+#writeup_status>tbody>tr>th, 
+#writeup_status>tfoot>tr>td, 
+#writeup_status>tfoot>tr>th, 
+#writeup_status>thead>tr>td, 
+#writeup_status>thead>tr>th{
+    padding: 0.5%;
+    border: 1px solid #FFF;
+
+}
+
+.marks{
+    width: 10%;
+}
+
+.marks form{
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+.marks input{
+    width: 50%;
+    margin: 0% 1% 0% 1%;
+    font-family: 'Montserrat', cursive;
+}
+
+.marks .btn, .center-align .btn{
+    background-color: #FFF;
+    color: #4e54c8;
+    font-family: 'Montserrat', cursive;
+    font-weight: 700;
+}
+
+table tr td .link-sub :hover{
+    color: blueviolet;
+}
+
+.center-align{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    font-family: 'Montserrat', cursive;
+}
+
+.filters{
+    margin-bottom: 3%;
+}
+
+.filters select{
+    margin: 0% 2% 0% 2%;
+}
+
+.head{
+    margin-top: 0%;
+}
+
+.head h1{
+    font-size: 3vw;
+    font-weight: 700;
+    color: #FFF;
+   
+}
+
+
+
+

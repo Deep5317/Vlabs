@@ -1,0 +1,55 @@
+body {
+    padding: 40px 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.grid>article {
+    padding-top: 5%;
+    border: 2px solid #ccc;
+    /* box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3); */
+    border-radius: 4px;
+}
+
+
+.grid>article>div img {
+    max-width: 80%;
+    
+}
+
+.grid .text {
+    padding: 20px;
+}
+
+.btn{
+    background-color: #FFF;
+    color: #4e54c8;
+    font-family: 'Montserrat', cursive;
+}
+
+.grid :hover{
+    cursor: pointer;
+    /* box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3); */
+    /* filter: drop-shadow(0 0 0.75rem crimson); */
+} 
+
+.grid article{
+    z-index: 1;
+}
+
+
+.img-wrapper{
+    margin: auto;
+    justify-content: center;
+    display: inline-block;
+}
+
